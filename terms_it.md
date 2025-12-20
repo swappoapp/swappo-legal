@@ -33,7 +33,7 @@ Accetti di **NON** caricare, elencare o scambiare:
 
 **Licenza sui Contenuti:** Caricando immagini e descrizioni, concedi a Swappo una licenza non esclusiva, mondiale e priva di royalty per utilizzare, visualizzare e riprodurre tali contenuti all'interno dell'app per facilitare il servizio. Ci riserviamo il diritto di rimuovere qualsiasi contenuto senza preavviso se viola questi Termini.
 
-## 6. Limitazione di Responsabilità (LEGGERE ATTENTAMENTE)
+## 6. Limitazione di Responsabilità
 Nella misura massima consentita dalla legge applicabile, Swappo e i suoi sviluppatori non saranno responsabili per alcun danno indiretto, incidentale, speciale, consequenziale o punitivo, inclusi senza limitazione:
 
 1.  **Dispute sulle Transazioni:** Qualsiasi controversia che sorga tra utenti in merito alla qualità, alla consegna o all'equità di uno scambio.
@@ -43,10 +43,10 @@ Nella misura massima consentita dalla legge applicabile, Swappo e i suoi svilupp
 
 Il Servizio è fornito "COSÌ COM'È" e "COME DISPONIBILE" senza garanzie di alcun tipo.
 
-## 7. Liberatoria (Release)
+## 7. Liberatoria 
 Nel caso in cui tu abbia una controversia con uno o più altri utenti, liberi Swappo (e i suoi funzionari, direttori, sviluppatori, agenti e dipendenti) da reclami, richieste e danni (effettivi e consequenziali) di ogni tipo e natura, noti e sconosciuti, derivanti da o in qualsiasi modo connessi a tali controversie.
 
-## 8. Manleva (Indemnification)
+## 8. Manleva 
 Accetti di difendere, indennizzare e manlevare Swappo e i suoi sviluppatori da e contro qualsiasi reclamo, danno, obbligo, perdita, responsabilità, costo o debito e spesa (inclusi, ma non limitati a, le spese legali) derivanti da:
 * Il tuo utilizzo e accesso al Servizio;
 * La tua violazione di qualsiasi termine dei presenti Termini;
