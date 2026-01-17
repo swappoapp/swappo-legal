@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminazione Account - Swappo</title>
+    <meta name="description" content="Guida alla cancellazione dell'account Swappo / Swappo Account Deletion Guide">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        swappo: {
+                            DEFAULT: '#FF8400',
+                            dark: '#cc6a00',    
+                            light: '#fff3e0',
+                            bg: '#f9f9f9'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="landing_page.html">
+                    <img src="assets/swappo_logo.png" alt="Swappo Logo" class="h-10">
+                </a>
+            </div>
+            
+            <div class="flex space-x-2 text-sm font-semibold">
+                <button onclick="setLanguage('it')" class="lang-btn hover:text-swappo px-2 py-1 rounded transition" id="btn-it">IT</button>
+                <span class="text-gray-300">|</span>
+                <button onclick="setLanguage('en')" class="lang-btn hover:text-swappo px-2 py-1 rounded transition" id="btn-en">EN</button>
+                <span class="text-gray-300">|</span>
+                <button onclick="setLanguage('fr')" class="lang-btn hover:text-swappo px-2 py-1 rounded transition" id="btn-fr">FR</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow py-12 px-4">
+        <div class="max-w-3xl mx-auto">
+            
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+                
+                <h1 id="page-title" class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 border-b pb-4">
+                    Eliminazione Account
+                </h1>
+                
+                <p id="page-intro" class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Se desideri eliminare definitivamente il tuo account Swappo e tutti i dati associati, puoi farlo direttamente dall'applicazione seguendo questi passaggi.
+                </p>
+
+                <h3 id="steps-title" class="text-xl font-bold text-gray-900 mb-4">Procedura passo dopo passo:</h3>
+                
+                <ol class="list-decimal list-outside ml-5 space-y-6 text-gray-700 mb-10">
+                    <li class="pl-2" id="step-1">
+                        Apri l'applicazione <span class="font-bold text-swappo-dark">Swappo</span> e accedi.
+                    </li>
+                    <li class="pl-2" id="step-2">
+                        Vai alla sezione <span class="font-bold">Profilo</span> (icona impostazioni nella barra in basso).
+                    </li>
+                    <li class="pl-2" id="step-3">
+                        Tocca l'icona di modifica del profilo (<span class="font-bold">Icona della matita ✏️</span>) in alto a destra.
+                    </li>
+                    <li class="pl-2" id="step-4">
+                        Scorri fino in fondo alla pagina e premi il pulsante rosso <span class="font-bold text-red-600">Chiudi Account</span>.
+                    </li>
+                    
+                    <li class="pl-2 bg-gray-50 p-4 rounded-lg border-l-4 border-gray-300">
+                        <span id="security-title" class="block font-bold text-gray-900 mb-1">Verifica di Sicurezza:</span>
+                        <ul class="list-disc list-inside space-y-2 text-sm">
+                            <li id="security-email">
+                                <strong>Se usi Email e Password:</strong> Ti verrà chiesto di reinserire le tue credenziali (email e password corrente) per confermare la tua identità.
+                            </li>
+                            <li id="security-google">
+                                <strong>Se usi Google:</strong> Questo passaggio non è necessario, procederai direttamente alla conferma.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="pl-2" id="step-final">
+                        Nella finestra di conferma finale, tocca <span class="font-bold">Elimina</span> per completare l'operazione.
+                    </li>
+                </ol>
+
+                <div class="bg-orange-50 border-l-4 border-swappo p-6 rounded-r-lg mb-10">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <svg class="h-6 w-6 text-swappo" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h3 id="warning-title" class="text-lg font-bold text-gray-900">Attenzione: Azione Irreversibile</h3>
+                            <div class="mt-2 text-sm text-gray-700">
+                                <p id="warning-intro" class="mb-2">Eliminando il tuo account:</p>
+                                <ul class="list-disc list-inside space-y-1 ml-1">
+                                    <li id="warning-1">Il tuo profilo e i tuoi dati verranno rimossi permanentemente.</li>
+                                    <li id="warning-2">Tutti i tuoi articoli in vendita verranno cancellati.</li>
+                                    <li id="warning-3">Perderai il saldo Token e la cronologia delle chat.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t pt-8">
+                    <h2 id="support-title" class="text-xl font-bold text-gray-900 mb-4">Hai bisogno di aiuto?</h2>
+                    <p id="support-text" class="text-gray-600">
+                        Se riscontri problemi durante la cancellazione, scrivi a:
+                    </p>
+                    <a href="mailto:support@swappoapp.it" class="inline-flex items-center mt-4 text-swappo font-bold hover:text-swappo-dark transition">
+                        support@swappoapp.it
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t py-8 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex justify-center flex-wrap gap-6 text-sm font-medium text-gray-500 mb-4">
+                <a href="landing_page.html" id="link-home" class="hover:text-swappo transition">Home</a>
+                <a href="privacy_it.html" id="link-privacy" class="hover:text-swappo transition">Privacy Policy</a>
+                <a href="terms_it.html" id="link-terms" class="hover:text-swappo transition">Termini e Condizioni</a>
+                <a href="mailto:support@swappoapp.it" id="link-contact" class="hover:text-swappo transition">Contatti</a>
+            </div>
+            <div class="text-xs text-gray-400">
+                &copy; 2026 Swappo App. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            it: {
+                title: "Eliminazione Account",
+                intro: "Se desideri eliminare definitivamente il tuo account Swappo e tutti i dati associati, puoi farlo direttamente dall'applicazione seguendo questi passaggi.",
+                stepsTitle: "Procedura passo dopo passo:",
+                step1: "Apri l'applicazione <span class='font-bold text-swappo-dark'>Swappo</span> e accedi.",
+                step2: "Vai alla sezione <span class='font-bold'>Profilo</span> (icona impostazioni nella barra in basso).",
+                step3: "Tocca l'icona di modifica del profilo (<span class='font-bold'>Icona della matita ✏️</span>) o la tua immagine profilo.",
+                step4: "Scorri fino in fondo alla pagina e premi il pulsante rosso <span class='font-bold text-red-600'>Chiudi Account</span>.",
+                secTitle: "Verifica di Sicurezza:",
+                secEmail: "<strong>Se usi Email e Password:</strong> Ti verrà chiesto di reinserire le tue credenziali (email e password corrente) per confermare la tua identità.",
+                secGoogle: "<strong>Se usi Google:</strong> Questo passaggio non è necessario, procederai direttamente alla conferma.",
+                stepFinal: "Nella finestra di conferma finale, tocca <span class='font-bold'>Elimina</span> per completare l'operazione.",
+                warnTitle: "Attenzione: Azione Irreversibile",
+                warnIntro: "Eliminando il tuo account:",
+                warn1: "Il tuo profilo e i tuoi dati verranno rimossi permanentemente.",
+                warn2: "Tutti i tuoi articoli in vendita verranno cancellati.",
+                warn3: "Perderai il saldo Token e la cronologia delle chat.",
+                suppTitle: "Hai bisogno di aiuto?",
+                suppText: "Se riscontri problemi durante la cancellazione, scrivi a:",
+                linkHome: "Home",
+                linkPrivacy: "Privacy Policy",
+                linkTerms: "Termini e Condizioni",
+                linkContact: "Contatti",
+                urlPrivacy: "privacy_it.html",
+                urlTerms: "terms_it.html"
+            },
+            en: {
+                title: "Account Deletion",
+                intro: "If you wish to permanently delete your Swappo account and associated data, you can do so directly from the application by following these steps.",
+                stepsTitle: "Step-by-step procedure:",
+                step1: "Open the <span class='font-bold text-swappo-dark'>Swappo</span> app and log in.",
+                step2: "Go to the <span class='font-bold'>Profile</span> section (settings icon in the bottom bar).",
+                step3: "Tap the profile edit icon (<span class='font-bold'>Pencil Icon ✏️</span>) at the top right.",
+                step4: "Scroll to the bottom of the page and press the red <span class='font-bold text-red-600'>Close Account</span> button.",
+                secTitle: "Security Verification:",
+                secEmail: "<strong>If using Email and Password:</strong> You will be asked to re-enter your credentials (email and current password) to confirm your identity.",
+                secGoogle: "<strong>If using Google:</strong> This step is not necessary, you will proceed directly to confirmation.",
+                stepFinal: "In the final confirmation window, tap <span class='font-bold'>Delete</span> to complete the operation.",
+                warnTitle: "Warning: Irreversible Action",
+                warnIntro: "By deleting your account:",
+                warn1: "Your profile and data will be permanently removed.",
+                warn2: "All your listed items will be deleted.",
+                warn3: "You will lose your Token balance and chat history.",
+                suppTitle: "Need help?",
+                suppText: "If you encounter issues during deletion, please write to:",
+                linkHome: "Home",
+                linkPrivacy: "Privacy Policy",
+                linkTerms: "Terms & Conditions",
+                linkContact: "Contact Us",
+                urlPrivacy: "privacy_en.html",
+                urlTerms: "terms_en.html"
+            },
+            fr: {
+                title: "Suppression du Compte",
+                intro: "Si vous souhaitez supprimer définitivement votre compte Swappo et les données associées, vous pouvez le faire directement depuis l'application en suivant ces étapes.",
+                stepsTitle: "Procédure étape par étape :",
+                step1: "Ouvrez l'application <span class='font-bold text-swappo-dark'>Swappo</span> et connectez-vous.",
+                step2: "Allez dans la section <span class='font-bold'>Profile</span> (icône paramètres dans la barre inférieure).",
+                step3: "Appuyez sur l'icône de modification du profil (<span class='font-bold'>Icône Crayon ✏️</span>) en haut à droite.",
+                step4: "Faites défiler jusqu'au bas de la page et appuyez sur le bouton rouge <span class='font-bold text-red-600'>Fermer le compte</span>.",
+                secTitle: "Vérification de Sécurité :",
+                secEmail: "<strong>Si vous utilisez E-mail et Mot de passe :</strong> Il vous sera demandé de saisir à nouveau vos identifiants (e-mail et mot de passe actuel) pour confirmer votre identité.",
+                secGoogle: "<strong>Si vous utilisez Google :</strong> Cette étape n'est pas nécessaire, vous passerez directement à la confirmation.",
+                stepFinal: "Dans la fenêtre de confirmation finale, appuyez sur <span class='font-bold'>Supprimer</span> pour terminer l'opération.",
+                warnTitle: "Attention : Action Irréversible",
+                warnIntro: "En supprimant votre compte :",
+                warn1: "Votre profil et vos données seront supprimés définitivement.",
+                warn2: "Tous vos articles en vente seront supprimés.",
+                warn3: "Vous perdrez votre solde de Jetons et l'historique de vos discussions.",
+                suppTitle: "Besoin d'aide ?",
+                suppText: "Si vous rencontrez des problèmes lors de la suppression, écrivez à :",
+                linkHome: "Accueil",
+                linkPrivacy: "Politique de confidentialité",
+                linkTerms: "Conditions générales",
+                linkContact: "Contactez-nous",
+                urlPrivacy: "privacy_en.html", // Fallback to EN if FR doesn't exist, or privacy_it.html based on your file structure
+                urlTerms: "terms_en.html"
+            }
+        };
+
+        function setLanguage(lang) {
+            const t = translations[lang];
+
+            // Text Updates
+            document.getElementById('page-title').textContent = t.title;
+            document.getElementById('page-intro').textContent = t.intro;
+            document.getElementById('steps-title').textContent = t.stepsTitle;
+            document.getElementById('step-1').innerHTML = t.step1;
+            document.getElementById('step-2').innerHTML = t.step2;
+            document.getElementById('step-3').innerHTML = t.step3;
+            document.getElementById('step-4').innerHTML = t.step4;
+            document.getElementById('security-title').textContent = t.secTitle;
+            document.getElementById('security-email').innerHTML = t.secEmail;
+            document.getElementById('security-google').innerHTML = t.secGoogle;
+            document.getElementById('step-final').innerHTML = t.stepFinal;
+            
+            document.getElementById('warning-title').textContent = t.warnTitle;
+            document.getElementById('warning-intro').textContent = t.warnIntro;
+            document.getElementById('warning-1').textContent = t.warn1;
+            document.getElementById('warning-2').textContent = t.warn2;
+            document.getElementById('warning-3').textContent = t.warn3;
+            
+            document.getElementById('support-title').textContent = t.suppTitle;
+            document.getElementById('support-text').textContent = t.suppText;
+
+            // Footer Links Text
+            document.getElementById('link-home').textContent = t.linkHome;
+            document.getElementById('link-privacy').textContent = t.linkPrivacy;
+            document.getElementById('link-terms').textContent = t.linkTerms;
+            document.getElementById('link-contact').textContent = t.linkContact;
+
+            // Footer Links URLs
+            document.getElementById('link-privacy').href = t.urlPrivacy;
+            document.getElementById('link-terms').href = t.urlTerms;
+
+            // Button Styles
+            ['it', 'en', 'fr'].forEach(l => {
+                const btn = document.getElementById('btn-' + l);
+                if (l === lang) {
+                    btn.classList.add('text-swappo', 'bg-orange-50');
+                } else {
+                    btn.classList.remove('text-swappo', 'bg-orange-50');
+                }
+            });
+
+            // Smooth Fade
+            document.body.classList.remove('fade-in');
+            void document.body.offsetWidth; // Trigger reflow
+            document.body.classList.add('fade-in');
+            
+            // Update lang attribute
+            document.documentElement.lang = lang;
+        }
+
+        // Initialize with Italian by default
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage('it');
+        });
+    </script>
+</body>
+</html>
