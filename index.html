@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swappo - App</title>
-    <meta name="description" content="Swappo App - Exchange, Sell, Save.">
-    
-    <meta property="og:title" content="Swappo" id="og-title">
-    <meta property="og:description" content="Dai nuova vita ai tuoi oggetti." id="og-description">
-    <meta property="og:image" content="assets/swappo_logo.png" id="og-image">
+    <title>Swappo | L'App per Scambiare Vestiti e Oggetti Usati</title>
+    <meta name="description" content="Vendere l'usato è diventato lento e costoso? Passa a Swappo! La community per scambiare vestiti e oggetti di persona senza commissioni. Scarica l'app gratis!">
+    <meta name="google-site-verification" content="HV_ximUoJfR-w3dZq-2jFJ8lmiGwToSp5MAvlWHbEJI" />
+    <link rel="canonical" href="https://info.swappoapp.it/" />
+
+    <meta name="apple-itunes-app" content="app-id=6758221646">
+
+    <meta property="og:title" content="Swappo | L'App per Scambiare Vestiti e Oggetti" id="og-title">
+    <meta property="og:description" content="Dimentica le trattative e le commissioni: lo scambio è semplice, equo e gratuito. 1 Oggetto = 1 Token." id="og-description">
+    <meta property="og:image" content="https://info.swappoapp.it/assets/swappo_logo.png" id="og-image">
+    <meta property="og:url" content="https://info.swappoapp.it/">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -34,13 +39,30 @@
         .fade-in { animation: fadeIn 0.3s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Swappo",
+      "operatingSystem": "ANDROID, IOS",
+      "applicationCategory": "ShoppingApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "description": "Swappo è la community dove il denaro non serve. Dimentica le trattative infinite e le commissioni: lo scambio di vestiti e oggetti usati è semplice, equo e gratuito.",
+      "url": "https://info.swappoapp.it/"
+    }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="assets/swappo_logo.png" alt="Swappo Logo" class="h-10">
+                <img src="assets/swappo_logo.png" alt="Logo Swappo - App per scambiare vestiti usati" class="h-10">
             </div>
             
             <div class="flex space-x-2 text-sm font-semibold">
@@ -87,7 +109,7 @@
             <div class="md:w-1/2 flex justify-center mt-12 md:mt-0 relative">
                 <div class="absolute bg-swappo-light rounded-full w-96 h-96 -z-10 blur-3xl opacity-50"></div>
                 <div class="bg-white rounded-[3rem] w-72 h-[550px] shadow-2xl border-8 border-gray-900 relative overflow-hidden flex items-center justify-center">
-                    <img src="assets/swappo_splash_screen.png" alt="Swappo App Screenshot" class="w-3/4">
+                    <img src="assets/swappo_splash_screen.png" alt="Schermata dell'app Swappo per lo scambio di oggetti a costo zero" class="w-3/4">
                     <div class="absolute top-0 w-32 h-6 bg-gray-900 rounded-b-xl"></div>
                 </div>
             </div>
@@ -172,7 +194,7 @@ const translations = {
     en: {
         heroTitle1: "Fashion belongs to people,",
         heroTitle2: "not stores.",
-        heroSubtitle: "Imagine a world where your style doesn't cost the Earth and value isn't measured in currency. Swappo is a gentle revolution: a vibrant community where we meet, exchange, and give new life to the clothes we love. <strongJoin the movement.<strong",
+        heroSubtitle: "Imagine a world where your style doesn't cost the Earth and value isn't measured in currency. Swappo is a gentle revolution: a vibrant community where we meet, exchange, and give new life to the clothes we love. <strong>Join the movement.</strong>",
         btnAppleSub: "Coming Soon",
         feat1Title: "Release your Story",
         feat1Desc: "Every item you no longer wear is someone else's treasure. Don't just sell it, set it free. Earn Tokens by putting beauty back into circulation.",
@@ -189,7 +211,7 @@ const translations = {
     fr: {
         heroTitle1: "La mode appartient aux gens,",
         heroTitle2: "pas aux magasins.",
-        heroSubtitle: "Imaginez un monde où votre style ne pèse pas sur la planète et où la valeur ne si mesure pas en euros. Swappo est une révolution douce : une communauté vibrante où l'on se rencontre et où l'on donne une seconde vie aux vêtements. <strongRejoignez le mouvement.<strong",
+        heroSubtitle: "Imaginez un monde où votre style ne pèse pas sur la planète et où la valeur ne si mesure pas en euros. Swappo est une révolution douce : une communauté vibrante où l'on se rencontre et où l'on donne une seconde vie aux vêtements. <strong>Rejoignez le mouvement.</strong>",
         btnAppleSub: "Bientôt disponible",
         feat1Title: "Libérez votre Histoire",
         feat1Desc: "Chaque vêtement que vous ne portez plus est le trésor de quelqu'un d'autre. Ne le vendez pas, libérez-le. Gagnez des jetons en remettant la beauté en circulation.",
@@ -211,7 +233,7 @@ const translations = {
             document.getElementById('hero-title-1').textContent = t.heroTitle1;
             document.getElementById('hero-title-2').textContent = t.heroTitle2;
             document.getElementById('hero-subtitle').innerHTML = t.heroSubtitle;
-            document.getElementById('btn-apple-sub').textContent = t.appleSub;
+            document.getElementById('btn-apple-sub').textContent = t.btnAppleSub;
             
             // Testi Feature Cards
             document.getElementById('feat-1-title').textContent = t.feat1Title;

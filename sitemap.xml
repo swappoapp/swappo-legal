@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://info.swappoapp.it/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://info.swappoapp.it/delete_account_guide.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://info.swappoapp.it/privacy_it.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://info.swappoapp.it/privacy_en.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://info.swappoapp.it/privacy_fr.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://info.swappoapp.it/terms_it.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://info.swappoapp.it/terms_en.html</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://info.swappoapp.it/terms_fr.html</loc>
+    <priority>0.5</priority>
+  </url>
+</urlset>
